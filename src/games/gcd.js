@@ -1,11 +1,11 @@
 import { getRndInteger } from '../utils.js';
-import { MAX_NUM_GCD, MIN_NUM_GCD } from '../settings.js';
+import { MAX_NUM, MIN_NUM } from '../settings.js';
 
 const RULE = 'Find the greatest common divisor of given numbers.';
 
 const getInput = () => ([
-  getRndInteger(MIN_NUM_GCD, MAX_NUM_GCD),
-  getRndInteger(MIN_NUM_GCD, MAX_NUM_GCD),
+  getRndInteger(MIN_NUM, MAX_NUM),
+  getRndInteger(MIN_NUM, MAX_NUM),
 ]);
 
 const getQuestion = ([a, b]) => (`${a} ${b}`);
