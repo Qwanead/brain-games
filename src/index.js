@@ -1,6 +1,6 @@
 import readValue from './cli.js';
 import { printGreeting } from './utils.js';
-import { TRIES_COUNT } from './const.js';
+import { NUM_OF_ATTEMPTS } from './settings.js';
 
 const startTry = (question, correctAnswer, name) => {
   console.log(`Question: ${question}`);
@@ -22,7 +22,7 @@ const startGame = (rule, getInput, getQuestion, getCorrectAnswer) => {
   const name = printGreeting();
   console.log(rule);
 
-  while (currentTry <= TRIES_COUNT && isAnswerCorrect) {
+  while (currentTry <= NUM_OF_ATTEMPTS && isAnswerCorrect) {
     const input = getInput();
     const question = getQuestion(input);
     const correctAnswer = String(getCorrectAnswer(input));

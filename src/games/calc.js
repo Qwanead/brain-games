@@ -1,5 +1,5 @@
 import { getRndInteger } from '../utils.js';
-import { MAX_NUM, MIN_NUM, OPERATORS } from '../const.js';
+import { MAX_NUM, MIN_NUM, OPERATORS } from '../settings.js';
 
 const RULE = 'What is the result of the expression?';
 

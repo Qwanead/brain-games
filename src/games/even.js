@@ -1,5 +1,5 @@
 import { getRndInteger } from '../utils.js';
-import { MAX_NUM, MIN_NUM } from '../const.js';
+import { MAX_NUM, MIN_NUM } from '../settings.js';
 
 const RULE = 'Answer "yes" if the number is even, otherwise answer "no".';
 
