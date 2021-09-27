@@ -6,6 +6,6 @@ import {
   getInput,
   getQuestion,
   getCorrectAnswer,
-} from '../src/games/even.js';
+} from '../src/games/calc.js';
 
 startGame(RULE, getInput, getQuestion, getCorrectAnswer);
