@@ -2,7 +2,7 @@ import readValue from './cli.js';
 import { printGreeting } from './utils.js';
 import { NUM_OF_ATTEMPTS } from './settings.js';
 
-const startTry = (question, correctAnswer, name) => {
+const startTry = (question: string, correctAnswer: string, name: string): boolean => {
   console.log(`Question: ${question}`);
   const answer = readValue('Your answer: ');
 
@@ -16,7 +16,12 @@ const startTry = (question, correctAnswer, name) => {
   return false;
 };
 
-const startGame = (rule, getInput, getQuestion, getCorrectAnswer) => {
+const startGame = <T>(
+  rule: string,
+  getInput: () => T,
+  getQuestion: (arr: T) => string,
+  getCorrectAnswer: (str: T) => number | null | 'yes' | 'no',
+) => {
   let currentTry = 1;
   let isAnswerCorrect = true;
   const name = printGreeting();

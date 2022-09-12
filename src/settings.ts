@@ -2,7 +2,7 @@ const MIN_NUM = 1;
 const MAX_NUM = 100;
 const SEQUENCE_LENGTH = 10;
 const NUM_OF_ATTEMPTS = 3;
-const OPERATORS = ['+', '-', '*'];
+const OPERATORS = ['+', '-', '*'] as const;
 
 export {
   MAX_NUM,
