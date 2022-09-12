@@ -1,3 +1,4 @@
+import BrainGame from './BrainGame.js';
 import { getRndInteger } from '../utils.js';
 import { MAX_NUM, MIN_NUM, SEQUENCE_LENGTH } from '../settings.js';
 
@@ -30,9 +31,9 @@ const getQuestion = (sequence: Progression) => (sequence.slice(1).join(' '));
 
 const getCorrectAnswer = (sequence: Progression): number => (sequence[0]);
 
-export {
-  RULE,
+export default new BrainGame({
+  rule: RULE,
   getInput,
   getQuestion,
   getCorrectAnswer,
-};
+});

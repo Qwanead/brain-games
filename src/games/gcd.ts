@@ -1,3 +1,4 @@
+import BrainGame from './BrainGame.js';
 import { getRndInteger } from '../utils.js';
 import { MAX_NUM, MIN_NUM } from '../settings.js';
 
@@ -13,7 +14,7 @@ const getQuestion = ([a, b]: [number, number]) => (`${a} ${b}`);
 const getCorrectAnswer = ([a, b]: [number, number]) => {
   let m = a;
   let n = b;
-  let result = null;
+  let result = n;
 
   while (m !== 0 && n !== 0) {
     if (m < n) {
@@ -27,9 +28,9 @@ const getCorrectAnswer = ([a, b]: [number, number]) => {
   return result;
 };
 
-export {
-  RULE,
+export default new BrainGame({
+  rule: RULE,
   getInput,
   getQuestion,
   getCorrectAnswer,
-};
+});

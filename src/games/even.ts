@@ -1,3 +1,4 @@
+import BrainGame from './BrainGame.js';
 import { getRndInteger } from '../utils.js';
 import { MAX_NUM, MIN_NUM } from '../settings.js';
 
@@ -13,9 +14,9 @@ const getCorrectAnswer = ([num]: [number]) => (
   num % 2 === 0 ? 'yes' : 'no'
 );
 
-export {
-  RULE,
+export default new BrainGame({
+  rule: RULE,
   getInput,
   getQuestion,
   getCorrectAnswer,
-};
+});
