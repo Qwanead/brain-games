@@ -27,6 +27,7 @@
   "type": "module",
   "homepage": "https://github.com/Qwanead/frontend-project-lvl1#readme",
   "dependencies": {
+    "@typescript-eslint/parser": "^5.36.2",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
