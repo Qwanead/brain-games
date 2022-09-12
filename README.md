@@ -18,7 +18,7 @@ sudo npm link
 ## Uninstall
 ``` sh
 cd ~/brain-games
-sudo npm unlink
+sudo npm unlink -g
 rm -rf ~/brain-games/
 ```
 
