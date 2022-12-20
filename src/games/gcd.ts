@@ -1,8 +1,7 @@
 import BrainGame from './BrainGame.js';
 import { getRndInteger } from '../utils.js';
 import { MAX_NUM, MIN_NUM } from '../settings.js';
-
-const RULE = 'Find the greatest common divisor of given numbers.';
+import Rule from '../Rule.js';
 
 const getInput = (): [number, number] => ([
   getRndInteger(MIN_NUM, MAX_NUM),
@@ -29,7 +28,7 @@ const getCorrectAnswer = ([a, b]: [number, number]) => {
 };
 
 export default new BrainGame({
-  rule: RULE,
+  rule: Rule.GCD,
   getInput,
   getQuestion,
   getCorrectAnswer,

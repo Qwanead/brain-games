@@ -1,8 +1,7 @@
 import BrainGame from './BrainGame.js';
 import { getRndInteger } from '../utils.js';
 import { MAX_NUM, MIN_NUM, OPERATORS } from '../settings.js';
-
-const RULE = 'What is the result of the expression?';
+import Rule from '../Rule.js';
 
 type Operator = typeof OPERATORS[number];
 
@@ -28,7 +27,7 @@ const getCorrectAnswer = ([a, operator, b]: [number, Operator, number]) => {
 };
 
 export default new BrainGame({
-  rule: RULE,
+  rule: Rule.CALC,
   getInput,
   getQuestion,
   getCorrectAnswer,

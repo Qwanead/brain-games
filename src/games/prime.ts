@@ -1,8 +1,7 @@
 import BrainGame from './BrainGame.js';
 import { getRndInteger } from '../utils.js';
 import { MAX_NUM, MIN_NUM } from '../settings.js';
-
-const RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+import Rule from '../Rule.js';
 
 const getInput = (): [number] => ([
   getRndInteger(MIN_NUM, MAX_NUM),
@@ -21,7 +20,7 @@ const getCorrectAnswer = ([num]: [number]) => {
 };
 
 export default new BrainGame({
-  rule: RULE,
+  rule: Rule.PRIME,
   getInput,
   getQuestion,
   getCorrectAnswer,

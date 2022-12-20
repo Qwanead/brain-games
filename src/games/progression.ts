@@ -1,8 +1,7 @@
 import BrainGame from './BrainGame.js';
 import { getRndInteger } from '../utils.js';
 import { MAX_NUM, MIN_NUM, SEQUENCE_LENGTH } from '../settings.js';
-
-const RULE = 'What number is missing in the progression?';
+import Rule from '../Rule.js';
 
 type Progression = [number, ...(number | '..')[]];
 
@@ -32,7 +31,7 @@ const getQuestion = (sequence: Progression) => (sequence.slice(1).join(' '));
 const getCorrectAnswer = (sequence: Progression): number => (sequence[0]);
 
 export default new BrainGame({
-  rule: RULE,
+  rule: Rule.PROGRESSION,
   getInput,
   getQuestion,
   getCorrectAnswer,
