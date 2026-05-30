@@ -6,8 +6,8 @@ import Rule from '../Rule.js';
 type Progression = [number, ...(number | '..')[]];
 
 const getInput = (): Progression => {
-  const startSequnce = getRndInteger(MAX_NUM, MIN_NUM);
-  const sequenceStep = getRndInteger(MAX_NUM, MIN_NUM);
+  const startSequnce = getRndInteger(MIN_NUM, MAX_NUM);
+  const sequenceStep = getRndInteger(MIN_NUM, MAX_NUM);
   const sequence = [startSequnce];
 
   for (let i = 1; i < SEQUENCE_LENGTH; i += 1) {
@@ -15,12 +15,12 @@ const getInput = (): Progression => {
   }
 
   const missElementIndex = getRndInteger(0, SEQUENCE_LENGTH - 1);
-  sequence.unshift(sequence[missElementIndex]);
+  const hiddenValue = sequence[missElementIndex];
   const result: Progression = [
-    sequence[missElementIndex],
-    ...sequence.slice(1, missElementIndex),
+    hiddenValue,
+    ...sequence.slice(0, missElementIndex),
     '..',
-    ...sequence.slice(missElementIndex + 1, sequence.length),
+    ...sequence.slice(missElementIndex + 1),
   ];
 
   return result;
