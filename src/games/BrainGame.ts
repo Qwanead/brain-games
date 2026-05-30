@@ -6,7 +6,13 @@ interface Game<T> {
 }
 
 class BrainGame<T> implements Game<T> {
-  rule;
+  rule: string;
+
+  getInput: () => T;
+
+  getQuestion: (arg: T) => string;
+
+  getCorrectAnswer: (arg: T) => number | 'yes' | 'no';
 
   constructor({ rule, getInput, getQuestion, getCorrectAnswer }: Game<T>) {
     this.rule = rule;
@@ -14,12 +20,6 @@ class BrainGame<T> implements Game<T> {
     this.getQuestion = getQuestion;
     this.getCorrectAnswer = getCorrectAnswer;
   }
-
-  getInput;
-
-  getQuestion;
-
-  getCorrectAnswer;
 }
 
 export { Game };
